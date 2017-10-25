@@ -5,6 +5,7 @@ import (
 	"fmt"
 
 	"github.com/fnproject/fn/api/models"
+	"github.com/treeder/yolib"
 )
 
 // This implements the extender.CallListener interface
@@ -13,6 +14,7 @@ type LogSpam struct {
 
 func (l *LogSpam) BeforeCall(ctx context.Context, call *models.Call) error {
 	fmt.Println("LOGSPAM2!!! LOGSPAM2!!! LOGSPAM2!!! LOGSPAM2!!!")
+	yolib.Call()
 	return nil
 }
 
